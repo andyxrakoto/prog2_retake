@@ -15,6 +15,9 @@ public class Message {
         this.autor = autor;
     }
 
+    public Message(String text, boolean b, User anon1) {
+    }
+
     public String getAutor() {
 
         return "";

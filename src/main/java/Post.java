@@ -8,8 +8,8 @@ public class Post {
     private User Owner;
     private List<Message> Messages;
 
-    public Post(String id, User owner, List<Message> messages) {
-        super()
+    public Post(String id, User owner) {
+        super();
         this.id = id;
         this.Owner = owner;
         this.Messages = new ArrayList<>();
@@ -18,7 +18,10 @@ public class Post {
     public void addMessage(Message message){
         this.Messages.add(message);
     }
-
-
-
+    public void showAutors(){
+        System.out.println("Autor of the Post" + id + " : ");
+        for (Message m : Messages){
+            m.getAutor().showInfos();
+        }
+    }
 }
